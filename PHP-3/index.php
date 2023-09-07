@@ -1,5 +1,6 @@
 <?php 
 
+    // looking for fibonacci on nth term
     function generateFibonacci($n) {
         $fibonacci = [];
         $fibonacci[0] = 0;
@@ -15,6 +16,7 @@
 $n = 10; 
 $fibonacciSequence = generateFibonacci($n);
 
+// display result
 for($i=0; $i<count($fibonacciSequence); $i++){
     echo $fibonacciSequence[$i], " ";
 }

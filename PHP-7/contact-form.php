@@ -1,4 +1,5 @@
 <?php 
+
     if(isset($_POST['submit'])){
         $enteredName = $_POST['name'];
         $enteredEmail = $_POST['email'];
