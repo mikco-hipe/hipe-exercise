@@ -8,4 +8,3 @@
         echo $enteredEmail, '<br>';
         echo $enteredMessage, '<br>';
     }
-?>

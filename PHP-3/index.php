@@ -17,4 +17,4 @@ $fibonacciSequence = generateFibonacci($n);
 for($i=0; $i<count($fibonacciSequence); $i++){
     echo $fibonacciSequence[$i], " ";
 }
-?>
+

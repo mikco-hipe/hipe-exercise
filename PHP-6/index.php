@@ -43,4 +43,3 @@ function descendingOrder($unsortedArray)
 
 ascendingOrder($unsortedArray);
 descendingOrder($unsortedArray);
-?>

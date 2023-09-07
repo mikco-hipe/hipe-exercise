@@ -10,4 +10,3 @@ echo "The date today is " . date("l") . "<br><br>";
 
 //
 echo "The time today is " . date("h:i:sa");
-?>

@@ -20,5 +20,3 @@
     //Deleting File
     unlink("C:\laragon\www\hipe-exercises\PHP-10\createdFile.txt");
     echo "<br>Files Deleted<br>";
-
-?>
