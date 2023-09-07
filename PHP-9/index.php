@@ -21,7 +21,6 @@
         echo substr($testString, 10, 15) . "<br>";
         echo substr($testString, 25) . "<br>";
 
-
     }
 
     function replacement(){

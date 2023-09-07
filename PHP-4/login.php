@@ -1,4 +1,5 @@
 <?php 
+
     $validUsername = "admin";
     $validPassword = "1234";
     

@@ -1,4 +1,5 @@
 <?php 
+
     function generateFibonacci($n) {
         $fibonacci = [];
         $fibonacci[0] = 0;
