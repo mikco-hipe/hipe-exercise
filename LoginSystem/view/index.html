@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="title-card">
+        <h1>Login System</h1>
+    </div>
+    <div class="container">
+        <div class="username-and-password"> 
+            <form method="post" action="/LoginSystem/controller/AuthenticatorController.php">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username" placeholder="mikco"><br><br>
+        
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" placeholder="secret"><br><br>
+        
+                <input type="submit" name="login" id="login"><br><br>
+        
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

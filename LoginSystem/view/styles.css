@@ -1,0 +1,13 @@
+body{
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title-card, .username-and-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 10vh;
+    padding: 20px; 
+}
