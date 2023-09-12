@@ -1,32 +1,35 @@
 <?php
-class DatabaseModel
-{
-    // const DB_HOST = "mysql-server";
-    // const DB_NAME = "user_authentication";
-    // const DB_USERNAME = "root";
-    // const DB_PASSWORD = "secret";
-    private $host = "mysql-server";
-    private $db_name = "user_authentication";
-    private $username = "root";
-    private $password = "secret";
-    public $conn;
-
-    public function getConnection()
+    include "../env.php";
+    
+    class DatabaseModel
     {
-        $this->conn = null;
+        
+        public $conn;
 
-        try {
-            $this->conn = new PDO(
-                "mysql:host=" . $this->host . ";dbname=" . $this->db_name,
-                $this->username,
-                $this->password
-            );
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $exception) {
-            echo "Connection error: " . $exception->getMessage();
+        public function getConnection()
+        {
+            $this->conn = null;
+
+            new EnvGlobal();
+
+            try {
+
+                $dbHost = getenv('DB_HOST');
+                $dbUser = getenv('DB_NAME');
+                $dbUsername = getenv('DB_USERNAME');
+                $dbPassword = getenv('DB_PASSWORD');
+
+                $this->conn = new PDO(
+                    "mysql:host=" . $dbHost. ";dbname=" . $dbUser,
+                    $dbUsername,
+                    $dbPassword
+                );
+                $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $exception) {
+                echo "Connection error: " . $exception->getMessage();
+            }
+
+            return $this->conn;
         }
-
-        return $this->conn;
     }
-}
 ?>
