@@ -1,7 +1,11 @@
 <?php
 class DatabaseModel
 {
-    private $host = "mysql-server"; // e.g., "localhost"
+    // const DB_HOST = "mysql-server";
+    // const DB_NAME = "user_authentication";
+    // const DB_USERNAME = "root";
+    // const DB_PASSWORD = "secret";
+    private $host = "mysql-server";
     private $db_name = "user_authentication";
     private $username = "root";
     private $password = "secret";

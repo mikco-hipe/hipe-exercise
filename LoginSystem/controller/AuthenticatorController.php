@@ -5,8 +5,6 @@ require_once('../model/DatabaseModel.php');
 class AuthenticatorController
 {
     private $db;
-    private $validUsername;
-    private $validPassword;
 
     public function __construct($username, $password)
     {
@@ -20,11 +18,9 @@ class AuthenticatorController
         $query = "SELECT * FROM users WHERE username = :username AND password = :password";
         $stmt = $this->db->prepare($query);
 
-        // Bind parameters
         $stmt->bindParam(":username", $enteredUsername);
         $stmt->bindParam(":password", $enteredPassword);
 
-        // Execute the query
         $stmt->execute();
 
         if ($stmt->rowCount() > 0) {
