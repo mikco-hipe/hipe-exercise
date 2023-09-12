@@ -1,4 +1,5 @@
 <?php
+
     
     require_once('../model/DatabaseModel.php');
 
@@ -32,6 +33,10 @@
         }
     }
 
+    //leave it here
+    //   $authenticator = new AuthenticatorController("", "");
+            
+    //remove this
     if (isset($_POST['login'])) {
         $enteredUsername = $_POST['username'];
         $enteredPassword = $_POST['password'];
