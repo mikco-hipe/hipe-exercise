@@ -1,11 +1,12 @@
 <?php
 
-    
-    require_once('../model/DatabaseModel.php');
+    include("../model/DatabaseModel.php");
 
     class AuthenticatorController
     {
         private $db;
+        private $validUsername;
+        private $validPassword;
 
         public function __construct($username, $password)
         {
@@ -18,7 +19,6 @@
         {
             $query = "SELECT * FROM users WHERE username = :username AND password = :password";
             $stmt = $this->db->prepare($query);
-            //var_dump($stmt);
 
             $stmt->bindParam(":username", $enteredUsername);
             $stmt->bindParam(":password", $enteredPassword);
@@ -32,18 +32,3 @@
             }
         }
     }
-
-    //leave it here
-    //   $authenticator = new AuthenticatorController("", "");
-            
-    //remove this
-    if (isset($_POST['login'])) {
-        $enteredUsername = $_POST['username'];
-        $enteredPassword = $_POST['password'];
-
-        $authenticator = new AuthenticatorController("", "");
-
-        $result = $authenticator->authenticate($enteredUsername, $enteredPassword);
-        echo $result;
-    }
-?>
